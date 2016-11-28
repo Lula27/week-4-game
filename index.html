@@ -7,7 +7,8 @@
 <body>
 	<h1> Sailor Moon Crystal Game </h1>
 
-<div class = "instructions">
+
+<!--div class = "instructions">
 	<p> Instructions </p>
 		<ul>
 			<li> Your goal is to match the magic number </li>
@@ -17,22 +18,25 @@
 			<li> If you go over the number, you lose... "In the name of the Moon, I'll punish you!" </li>
 			<li> Good luck! </li>
 		</ul>
-</div>
+</div-->
 
-<div class = "images">  <!--Do I need to give the images an id? ie: <img id="zero" src="http://i61.tinypic.com/140jfnp_th.png" data-value="0" />-->
+ <!--div where "MagicNumber" will appear-->
+ 	<h2 class="text-center" id="MagicNumber"></h2>
 
-	<span id="Wnumber">
-	<p class="Wand"><img src= "file:///C:/Users/loret/Desktop/RCB/W4_jQuery/Homework%204/week-4-game/assets/images/Wand.jpg" alt="SmWand" height="200px" width="150px"></p>
-	</span>
+	<div class = "images">  <!--Do I need to give the images an id? ie: <img id="zero" src="http://i61.tinypic.com/140jfnp_th.png" data-value="0" />-->
 
-	<p class ="SM"><img src="file:///C:/Users/loret/Desktop/RCB/W4_jQuery/Homework%204/week-4-game/assets/images/crystal1.jpg" alt="SailorMoon" height="130px" width="130px" data-value="7"></p>
+		<div id="Mnumber">
+			<p class="Wand"><img src= "file:///C:/Users/loret/Desktop/RCB/W4_jQuery/Homework%204/week-4-game/assets/images/Wand.jpg" alt="Sailor Moon's Wand" height="200px" width="150px"></p>
+		</div>
 
-	<p class="SMer"><img src="file:///C:/Users/loret/Desktop/RCB/W4_jQuery/Homework%204/week-4-game/assets/images/Crystal2.jpg" alt="SailorMercury" height="130px" width="130px" data-value="30"></p>
+			<p class ="SM"><img src="file:///C:/Users/loret/Desktop/RCB/W4_jQuery/Homework%204/week-4-game/assets/images/crystal1.jpg" alt="SailorMoon" height="130px" width="130px" data-value="7"></p>
 
-	<p class="SV"><img src="file:///C:/Users/loret/Desktop/RCB/W4_jQuery/Homework%204/week-4-game/assets/images/Crystal3.jpg" alt="SailorVenus" height="130px" width="130px" data-value="10"></p>
+			<p class="SMer"><img src="file:///C:/Users/loret/Desktop/RCB/W4_jQuery/Homework%204/week-4-game/assets/images/Crystal2.jpg" alt="SailorMercury" height="130px" width="130px" data-value="30"></p>
 
-	<p class="SMars"><img src="file:///C:/Users/loret/Desktop/RCB/W4_jQuery/Homework%204/week-4-game/assets/images/Crystal4.jpg" alt="SailorMars" height="130px" width="130px" data-value="20"></p>
-</div>
+			<p class="SV"><img src="file:///C:/Users/loret/Desktop/RCB/W4_jQuery/Homework%204/week-4-game/assets/images/Crystal3.jpg" alt="SailorVenus" height="130px" width="130px" data-value="10"></p>
+
+			<p class="SMars"><img src="file:///C:/Users/loret/Desktop/RCB/W4_jQuery/Homework%204/week-4-game/assets/images/Crystal4.jpg" alt="SailorMars" height="130px" width="130px" data-value="20"></p>
+	</div>
 
 <script type="text/javascript" src= "assets/javascript/game.js"></script>
 </body>
