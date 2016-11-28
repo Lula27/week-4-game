@@ -1,6 +1,17 @@
+body{
+	background-color: white;  /*make backround black in end*/
+}
+
 .images{
 	clear: all;
 	float: left;
+}
+
+.Wand{
+	display: block;
+	margin: auto;
+	width: 10%; 
+	padding: 50px;
 }
 
 .SM{
