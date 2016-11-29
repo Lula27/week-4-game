@@ -1,10 +1,13 @@
 <!DOCTYPE html>
 <html>
 <head>
-	<title>My RPG</title>
+	<meta charset="UTF-8">
+	<title>Moon Number Magic</title>
 	<link rel="stylesheet" type="text/css" href="assets/css/style.css">
+	<script src="https://code.jquery.com/jquery-2.2.3.js"></script> 
 </head>
 <body>
+
 	<h1> Sailor Moon Crystal Game </h1>
 
 
@@ -20,16 +23,11 @@
 		</ul>
 </div-->
 
- <!--div where "MagicNumber" will appear-->
- 	<h2 class="text-center" id="MagicNumber"></h2>
+	<div class="images">  <!--Do I need to give the images an id? ie: <img id="zero" src="http://i61.tinypic.com/140jfnp_th.png" data-value="0" />-->
 
-	<div class = "images">  <!--Do I need to give the images an id? ie: <img id="zero" src="http://i61.tinypic.com/140jfnp_th.png" data-value="0" />-->
+			<p id="Wand"><img src="file:///C:/Users/loret/Desktop/RCB/W4_jQuery/Homework%204/week-4-game/assets/images/Wand.jpg" alt="Sailor Moon's Wand" height="200px" width="150px"></p>
 
-		<div id="Mnumber">
-			<p class="Wand"><img src= "file:///C:/Users/loret/Desktop/RCB/W4_jQuery/Homework%204/week-4-game/assets/images/Wand.jpg" alt="Sailor Moon's Wand" height="200px" width="150px"></p>
-		</div>
-
-			<p class ="SM"><img src="file:///C:/Users/loret/Desktop/RCB/W4_jQuery/Homework%204/week-4-game/assets/images/crystal1.jpg" alt="SailorMoon" height="130px" width="130px" data-value="7"></p>
+			<p class="SM"><img src="file:///C:/Users/loret/Desktop/RCB/W4_jQuery/Homework%204/week-4-game/assets/images/crystal1.jpg" alt="SailorMoon" height="130px" width="130px" data-value="7"></p>
 
 			<p class="SMer"><img src="file:///C:/Users/loret/Desktop/RCB/W4_jQuery/Homework%204/week-4-game/assets/images/Crystal2.jpg" alt="SailorMercury" height="130px" width="130px" data-value="30"></p>
 
@@ -38,6 +36,9 @@
 			<p class="SMars"><img src="file:///C:/Users/loret/Desktop/RCB/W4_jQuery/Homework%204/week-4-game/assets/images/Crystal4.jpg" alt="SailorMars" height="130px" width="130px" data-value="20"></p>
 	</div>
 
-<script type="text/javascript" src= "assets/javascript/game.js"></script>
+ <!--div where "MagicNumber" will appear-->
+ 	<h2 class="text-center" id="MNumber"></h2>
+
+<script type="text/javascript" src="assets/javascript/game.js"></script>
 </body>
 </html>

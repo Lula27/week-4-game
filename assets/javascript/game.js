@@ -1,3 +1,5 @@
+
+
 //Sailor Moon's Magic Number
 /*The objective of this game is to match the magic number.
 Magic Number: Randomly generated numbers between (27-77)
@@ -9,23 +11,26 @@ First Round->Sailor Moon: 7 ; Sailor Mercury: 30; Sailor Venus: 10; Sailor Mars:
 2. click on characters to chose a number
 3. numbers appear in designated section*/
 
+
 //Prepare for take off; Generate a random Magic number (btw 27-77) after clicking wand image 
 $(document).ready(function() {
 
 	//When wand is clicked:
-	$(".Wand").on("click", function() {
+	$("#Wand").on("click", function() {
 		var MagicNumber = ""; 
 
-		for (var i = 0; i < 1; i++) {
+		for (var i = 0; i < 9; i++) {
 		MagicNumber = MagicNumber + Math.floor((Math.random() * 9) + 1);
 		
 		}
 
-		$("#MagicNumber").prepend(MagicNumber + "<br>"); 
+		$("#MNumber").prepend(MagicNumber + "<br>"); 
+
 	}); 
 
 }); 
 
+$("#Wand").css("cursor", "pointer"); 
 //Associate image with number-done in html
 
 /*var SailorMoon = 7;
