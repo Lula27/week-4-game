@@ -15,11 +15,11 @@ First Round->Sailor Moon: 7 ; Sailor Mercury: 30; Sailor Venus: 10; Sailor Mars:
 //Prepare for take off; Generate a random Magic number (btw 27-77) after clicking wand image 
 $(document).ready(function() {
 
-	//When wand is clicked:
+	//When wand is clicked: 
 	$("#Wand").on("click", function() {
 		var MagicNumber = ""; 
 
-		for (var i = 0; i < 9; i++) {
+		for (var i = 0; i < 2; i++) {
 		MagicNumber = MagicNumber + Math.floor((Math.random() * 9) + 1);
 		
 		}
