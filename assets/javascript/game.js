@@ -30,7 +30,11 @@ $(document).ready(function() {
 
 }); 
 
-$("#Wand").css("cursor", "pointer"); 
+
+//Add pointers for all images
+$(".images").css("cursor", "pointer");
+
+
 //Associate image with number-done in html
 
 /*var SailorMoon = 7;
