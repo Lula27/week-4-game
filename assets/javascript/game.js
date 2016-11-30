@@ -42,8 +42,16 @@ var SailorMercury = 30;
 var SailorVenus = 10;
 var SailorMars = 20; */ 
 
+// Retrieve number with click of character image
 
+function Sailor(moon, mercury, venus, mars) {
+	this.name = name; 
+	this.number = [];
+	this.onClick = function() {
+			//function for random number goes here 
+	}; 
+}
 
-
+var SailorMoon = new Sailor('Moon', 27)
 
  

@@ -1,5 +1,5 @@
-body{
-	background-color: white;  /*make backround black in end*/
+h1{
+	text-align: center;
 }
 
 .images{
@@ -29,3 +29,11 @@ body{
 .SMars{
 	float: left;
 }
+
+/*.boxed {
+	width: 10%;
+	height: 10%;
+	margin: 5%;
+	border: 10px solid black;
+	float: left;
+}*/
