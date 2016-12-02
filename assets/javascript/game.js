@@ -19,6 +19,9 @@ var Losses = 0;
 //Prepare for take off; Generate a random Magic number (btw 19 - 120) after clicking wand image 
 $(document).ready(function() {
 
+//Add pointers for all images
+$(".images").css("cursor", "pointer");
+
 	//When wand is clicked: 
 	$("#Wand").on("click", function() {
 		var MagicNumber = ""; 
@@ -51,8 +54,6 @@ $(document).ready(function() {
 }); 
 
 
-//Add pointers for all images
-$(".images").css("cursor", "pointer");
 
 
 //Associate image with number-done in html
