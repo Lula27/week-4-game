@@ -56,15 +56,15 @@ $('.images').css('cursor', 'pointer');
 
 	})
 
-	// //Responsive for winning/losing game:insert media clips
-	// if (MagicNumber == MNumber) {  //Not working as expected. Losses alert keeps popping up and automatically adding... 
-	// 	Wins++;
-	// 	$('#wins').html(Wins); 
-	// 	alert('Moon Prism Power!');
-	// }else {
-	// 	Losses++; 
-	// 	$('#losses').html(Losses); 
-	// 	alert('In the name of the moon, I will punish you!');
+	   // Responsive for winning/losing game:insert media clips
+		// if (MagicNumber == MNumber) {  //Not working as expected. Losses alert keeps popping up and automatically adding... 
+	 // 	Wins++;
+	 // 	$('#wins').html(Wins); 
+	 // 	alert('Moon Prism Power!');
+		// }else {
+	 // 	Losses++; 
+	 // 	$('#losses').html(Losses); 
+	 // 	alert('In the name of the moon, I will punish you!');
 	// }
 
 }); 
