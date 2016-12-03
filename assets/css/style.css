@@ -30,6 +30,11 @@ h1{
 	float: left;
 }
 
+#wins, #losses{
+	clear: all; 
+	position: relative;
+	margin: auto; 
+}
 /*.boxed {
 	width: 10%;
 	height: 10%;

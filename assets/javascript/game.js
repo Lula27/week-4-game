@@ -20,10 +20,10 @@ var Losses = 0;
 $(document).ready(function() {
 
 //Add pointers for all images
-$(".images").css("cursor", "pointer");
+$('.images').css('cursor', 'pointer');
 
 	//When wand is clicked: 
-	$("#Wand").on("click", function() {
+	$('#Wand').on('click', function() {
 		var MagicNumber = ""; 
 
 		for (var i = 0; i < 2; i++) {
@@ -31,37 +31,36 @@ $(".images").css("cursor", "pointer");
 		
 		}
 
-		$("#MNumber").prepend(MagicNumber + "<br>"); 
-
+		$('#MNumber').html(MagicNumber + '<br>'); 
+	
 	}); 
 		//Fade numbers after click to make new numbers appear
 		// $("#MNumber").fadeOut(function() {
-		// 	$(this).text(MagicNumber).fadeIn();
+		// 	$(this).text(MagicNumber).fadeIn()
+	// $('#MNumber').fadeOut(MagicNumber + '<br>'); ;
 			
 		// });
-	//Generate random number with click on Sailor Moon character 
-	$(".SM,.SMer,.SV,.SMars").on("click", function() {
-		var MagicNumber = ""; 
+
+	//Generate random number (btw 1-12) with click on Sailor Moon character 
+	$(".SM").on("click", function() {
+		var MNumber = ""; 
 
 		for (var i = 0; i < 2; i++) {
-		MagicNumber = MagicNumber + Math.floor((Math.random() * 9) + 1);
+		MNumber = MNumber + Math.floor((Math.random() * 3) + 1);
 		
 		}
 
-		$("#MOutput").prepend(MagicNumber + "<br>"); 
+		$("#MOutput").html(MNumber + "<br>"); 
 
 	}); 
+
+
+
+
 }); 
 
 
 
-
-//Associate image with number-done in html
-
-/*var SailorMoon = 7;
-var SailorMercury = 30;
-var SailorVenus = 10;
-var SailorMars = 20; */ 
 
 // Retrieve number with click of character image (1 - 12)
 
@@ -69,7 +68,7 @@ function Sailor(moon, mercury, venus, mars) {
 	this.name = name; 
 	this.number = [];
 	this.onClick = function() {
-			//function for random number goes here 
+		
 	}; 
 }
 
