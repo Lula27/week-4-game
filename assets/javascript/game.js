@@ -12,9 +12,11 @@ First Round->Sailor Moon: 7 ; Sailor Mercury: 30; Sailor Venus: 10; Sailor Mars:
 //Generate variables
 var Wins = 0;
 var Losses = 0; 
+var MagicNumber = Math.floor((Math.random() * 9) + 1);
+var MNumber = Math.floor((Math.random() * 9) + 1);
 
 //Instructions
-// alert("Instructions: 1.Click on Wand  2.Pick Sailor Moon and her friends 3.Match the Magic Number!"); 
+alert("Instructions: 1.Click on Wand  2.Pick Sailor Moon and her friends 3.Match the Magic Number!"); 
 
 //Prepare for take off; Generate a random Magic number (btw 19 - 120) after clicking wand image 
 $(document).ready(function() {
@@ -33,7 +35,7 @@ $('.images').css('cursor', 'pointer');
 
 		$('#MNumber').html(MagicNumber + '<br>'); 
 	
-	}); 
+	}) 
 		//Fade numbers after click to make new numbers appear
 		// $("#MNumber").fadeOut(function() {
 		// 	$(this).text(MagicNumber).fadeIn()
@@ -41,8 +43,8 @@ $('.images').css('cursor', 'pointer');
 			
 		// });
 
-	//Generate random number (btw 1-12) with click on Sailor Moon character 
-	$(".SM").on("click", function() {
+	//Generate random number (btw 1-12) with click on Sailor Moon character -How do I get them to add up? 
+	$('.SM,.SMer,.SV,.SMars').on('click', function() {
 		var MNumber = ""; 
 
 		for (var i = 0; i < 2; i++) {
@@ -50,12 +52,20 @@ $('.images').css('cursor', 'pointer');
 		
 		}
 
-		$("#MOutput").html(MNumber + "<br>"); 
+		$('#MOutput').html(MNumber + '<br>'); 
 
-	}); 
+	})
 
-
-
+	// //Responsive for winning/losing game:insert media clips
+	// if (MagicNumber == MNumber) {  //Not working as expected. Losses alert keeps popping up and automatically adding... 
+	// 	Wins++;
+	// 	$('#wins').html(Wins); 
+	// 	alert('Moon Prism Power!');
+	// }else {
+	// 	Losses++; 
+	// 	$('#losses').html(Losses); 
+	// 	alert('In the name of the moon, I will punish you!');
+	// }
 
 }); 
 
@@ -64,14 +74,14 @@ $('.images').css('cursor', 'pointer');
 
 // Retrieve number with click of character image (1 - 12)
 
-function Sailor(moon, mercury, venus, mars) {
-	this.name = name; 
-	this.number = [];
-	this.onClick = function() {
+// function Sailor(moon, mercury, venus, mars) {
+// 	this.name = name; 
+// 	this.number = [];
+// 	this.onClick = function() {
 		
-	}; 
-}
+// 	}; 
+// }
 
-var SailorMoon = new Sailor('Moon', 27)
+// var SailorMoon = new Sailor('Moon', 27)
 
  
