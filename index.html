@@ -10,32 +10,27 @@
 </head>
 <body>
 
-	<h1> Sailor Moon's Magic Number </h1>
+	<div class="container">
+		<!-- Create jumbotron -->
+		<div class="jumbotron" style="background-color: black; color: white;">
+			<div class="container">
+	<h1 class="text-center"><strong>Sailor Moon's Magic Number</strong></h1>
+			</div>
+		</div>
+	</div>
 
-
-<!--div class = "instructions">
-	<p> Instructions </p>
-		<ul>
-			<li> Your goal is to match the magic number </li>
-			<li> Click on the icons of the Sailor Moon characters </li>
-			<li> Each icon is associated with a different number </li>
-			<li> You win if your total reaches the magic number! </li>
-			<li> If you go over the number, you lose... "In the name of the Moon, I'll punish you!" </li>
-			<li> Good luck! </li>
-		</ul>
-</div-->
 
 	<div class="images">  <!--Do I need to give the images an id? ie: <img id="zero" src="http://i61.tinypic.com/140jfnp_th.png" data-value="0" />-->
 
-			<p id="Wand"><img src="file:///C:/Users/loret/Desktop/RCB/W4_jQuery/Homework%204/week-4-game/assets/images/Wand.jpg" alt="Sailor Moon's Wand" height="200px" width="150px"></p>
+			<p id="Wand"><img src="assets/images/Wand.jpg" alt="Sailor Moon's Wand" height="200px" width="150px"></p>
 
-			<p class="SM"><img src="file:///C:/Users/loret/Desktop/RCB/W4_jQuery/Homework%204/week-4-game/assets/images/crystal1.jpg" alt="SailorMoon" height="130px" width="130px" data-value="7"></p>
+			<p class="SM"><img src="assets/images/crystal1.jpg" alt="SailorMoon" height="130px" width="130px" data-value=""></p>
 
-			<p class="SMer"><img src="file:///C:/Users/loret/Desktop/RCB/W4_jQuery/Homework%204/week-4-game/assets/images/Crystal2.jpg" alt="SailorMercury" height="130px" width="130px" data-value="30"></p>
+			<p class="SMer"><img src="assets/images/Crystal2.jpg" alt="SailorMercury" height="130px" width="130px" data-value=""></p>
 
-			<p class="SV"><img src="file:///C:/Users/loret/Desktop/RCB/W4_jQuery/Homework%204/week-4-game/assets/images/Crystal3.jpg" alt="SailorVenus" height="130px" width="130px" data-value="10"></p>
+			<p class="SV"><img src="assets/images/Crystal3.jpg" alt="SailorVenus" height="130px" width="130px" data-value=""></p>
 
-			<p class="SMars"><img src="file:///C:/Users/loret/Desktop/RCB/W4_jQuery/Homework%204/week-4-game/assets/images/Crystal4.jpg" alt="SailorMars" height="130px" width="130px" data-value="20"></p>
+			<p class="SMars"><img src="assets/images/Crystal4.jpg" alt="SailorMars" height="130px" width="130px" data-value=""></p>
 	</div>
 
  <!--div where "MagicNumber" will appear-->
@@ -45,15 +40,23 @@
 		<h3 class="text-center" id="MOutput"></h3>
 
  <!--where wins and losses will show up-->
-	<div>
-		<h4>Wins: </h4>
-		<span id="wins"></span>
+	<div class="row">
+
+		<!-- Win Count -->
+		<div class="col-lg-6">
+			<div class="panel-heading">
+				<h3 class="panel-title text-center">Wins:</h3>
+			</div>
+			<div class="panel-body">
+				<h4 class="text-center" id="winCount">0</h4>
+			</div>
+		</div>	
 	</div>
 
-	<div>
-		<h4>Losses: </h4>0
-		<span id="losses"></span>
 
-<script type="text/javascript" src="assets/javascript/game.js"></script>
-</body>
+	<!-- Add JQuery -->
+	<script type="text/javascript" src="assets/javascript/game.js"></script>
+
+	</body>
+
 </html>

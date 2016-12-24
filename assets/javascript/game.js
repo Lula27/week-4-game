@@ -10,13 +10,43 @@ First Round->Sailor Moon: 7 ; Sailor Mercury: 30; Sailor Venus: 10; Sailor Mars:
 3. numbers appear in designated section*/
 
 //Generate variables
-var Wins = 0;
-var Losses = 0; 
-var MagicNumber = Math.floor((Math.random() * 9) + 1);
-var MNumber = Math.floor((Math.random() * 9) + 1);
+// Wins and Losses Count
+var wins = 0;
+var losses = 0; 
+
+// Scores 
+var magicNumber = 0;
+var mNumber = 0;
+
+// Values for SailorScouts 
+var sailorScouts = {
+	Moon: 
+	{
+		name: "Moon",
+		value: 0
+	},
+	Murcury:
+	{
+		name: "Murcury",
+		value: 0
+	},
+	Venus: 
+	{
+		name: "Venus",
+		value: 0
+	},
+	Mars: 
+	{
+		name: "Mars",
+		value: 0
+	}
+}; 
+
+// console.log(sailorScouts.Moon.value); 
+
 
 //Instructions
-alert("Instructions: 1.Click on Wand  2.Pick Sailor Moon and her friends 3.Match the Magic Number!"); 
+// alert("Instructions: 1.Click on Wand  2.Pick Sailor Moon and her friends 3.Match the Magic Number!"); 
 
 //Prepare for take off; Generate a random Magic number (btw 19 - 120) after clicking wand image 
 $(document).ready(function() {
@@ -24,16 +54,43 @@ $(document).ready(function() {
 //Add pointers for all images
 $('.images').css('cursor', 'pointer');
 
+// Helper Function for generating random number
+var getRandom = function(min, max) {
+	return Math.floor(Math.random() * (max - min + 1) + min); 
+};
+
+// console.log(getRandom);
+
+// Update values of variables 
+magicNumber += getRandom(19, 120);
+mNumber += (sailorScouts.Moon.value + sailorScouts.Murcury.value + sailorScouts.Venus.value + sailorScouts.Mars.value);
+console.log(mNumber); 
+
+
+// Give value to images (api use)
+sailorScouts.Moon.value += getRandom(1, 12); 
+// console.log(sailorScouts.Moon.value); 
+sailorScouts.Murcury.value += getRandom(1, 12); 
+sailorScouts.Venus.value += getRandom(1, 12);
+sailorScouts.Mars.value += getRandom(1, 12);
+
+
+	// Start & Restart Game-flesh this out!
+	// var startGame = function() {};
+
+	// set new set Magic number to specified range
+
+
 	//When wand is clicked: 
 	$('#Wand').on('click', function() {
-		var MagicNumber = ""; 
+		var magicNumber = ""; 
 
 		for (var i = 0; i < 2; i++) {
-		MagicNumber = MagicNumber + Math.floor((Math.random() * 9) + 1);
+		magicNumber = getRandom(19, 120);
 		
 		}
 
-		$('#MNumber').html(MagicNumber + '<br>'); 
+		$('#MNumber').html(magicNumber + '<br>'); 
 	
 	}) 
 		//Fade numbers after click to make new numbers appear
@@ -45,14 +102,14 @@ $('.images').css('cursor', 'pointer');
 
 	//Generate random number (btw 1-12) with click on Sailor Moon character -How do I get them to add up? 
 	$('.SM,.SMer,.SV,.SMars').on('click', function() {
-		var MNumber = ""; 
+		var mNumber = ""; 
 
 		for (var i = 0; i < 2; i++) {
-		MNumber = MNumber + Math.floor((Math.random() * 3) + 1);
+		mNumber = mNumber + Math.floor((Math.random() * 3) + 1);
 		
 		}
 
-		$('#MOutput').html(MNumber + '<br>'); 
+		$('#MOutput').html(mNumber + '<br>'); 
 
 	})
 
@@ -66,6 +123,20 @@ $('.images').css('cursor', 'pointer');
 	 // 	$('#losses').html(Losses); 
 	 // 	alert('In the name of the moon, I will punish you!');
 	// }
+
+
+	// Scores Count
+	if (magicNumber === mNumber) {
+		alert("You win!");
+		Wins++; 
+	}
+
+
+
+
+
+
+
 
 }); 
 
