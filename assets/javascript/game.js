@@ -18,31 +18,11 @@ var losses = 0;
 var magicNumber = 0;
 var mNumber = 0;
 
-// Values for SailorScouts 
-var sailorScouts = {
-	Moon: 
-	{
-		name: "Moon",
-		value: 0
-	},
-	Murcury:
-	{
-		name: "Murcury",
-		value: 0
-	},
-	Venus: 
-	{
-		name: "Venus",
-		value: 0
-	},
-	Mars: 
-	{
-		name: "Mars",
-		value: 0
-	}
-}; 
-
-// console.log(sailorScouts.Moon.value); 
+// Values for individual Sailor Scouts 
+var moon = 0; 
+var murcury = 0; 
+var venus = 0;  
+var mars = 0;  
 
 
 //Instructions
@@ -63,17 +43,19 @@ var getRandom = function(min, max) {
 
 // Update values of variables 
 magicNumber += getRandom(19, 120);
-mNumber += (sailorScouts.Moon.value + sailorScouts.Murcury.value + sailorScouts.Venus.value + sailorScouts.Mars.value);
-console.log(mNumber); 
+mNumber += (moon + murcury + venus + mars);  
+// console.log(mNumber); 
 
 
-// Give value to images (api use)
-sailorScouts.Moon.value += getRandom(1, 12); 
-// console.log(sailorScouts.Moon.value); 
-sailorScouts.Murcury.value += getRandom(1, 12); 
-sailorScouts.Venus.value += getRandom(1, 12);
-sailorScouts.Mars.value += getRandom(1, 12);
-
+// Give value to images/Sailor Scouts (api use)
+moon += getRandom(1, 12); 
+// console.log(moon); 
+murcury += getRandom(1, 12); 
+// console.log(murcury); 
+venus += getRandom(1, 12);
+mars += getRandom(1, 12);
+// console.log(venus); 
+// console.log(mars); 
 
 	// Start & Restart Game-flesh this out!
 	// var startGame = function() {};
