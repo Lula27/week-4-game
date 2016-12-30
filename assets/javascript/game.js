@@ -43,13 +43,13 @@ var getRandom = function(min, max) {
 
 // Update values of variables 
 magicNumber += getRandom(19, 120);
-mNumber += (moon + murcury + venus + mars);  
+// mNumber += (moon + murcury + venus + mars);  
 // console.log(mNumber); 
 
 
 // Give value to images/Sailor Scouts (api use)
-moon += getRandom(1, 12); 
-// console.log(moon); 
+moon += getRandom(1, 12);  
+moon2 = parseInt(moon);  /*How can I get the value of moon to be a number and not a function?*/ 
 murcury += getRandom(1, 12); 
 // console.log(murcury); 
 venus += getRandom(1, 12);
@@ -73,7 +73,7 @@ mars += getRandom(1, 12);
 		}
 
 		$('#MNumber').html(magicNumber + '<br>'); 
-	
+		// console.log(magicNumber);
 	}) 
 		//Fade numbers after click to make new numbers appear
 		// $("#MNumber").fadeOut(function() {
@@ -83,15 +83,16 @@ mars += getRandom(1, 12);
 		// });
 
 	//Generate random number (btw 1-12) with click on Sailor Moon character -How do I get them to add up? 
-	$('.SM,.SMer,.SV,.SMars').on('click', function() {
-		var mNumber = ""; 
+		$('.SM,.SMer,.SV,.SMars').on('click', function() {
+			var mNumber = ""; 
 
 		for (var i = 0; i < 2; i++) {
-		mNumber = mNumber + Math.floor((Math.random() * 3) + 1);
+		mNumber += getRandom(1, 10);
 		
 		}
 
 		$('#MOutput').html(mNumber + '<br>'); 
+	// 	console.log(mNumber); 
 
 	})
 
