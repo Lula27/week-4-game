@@ -113,7 +113,10 @@ mars += getRandom(1, 12);
 		alert("You win!");
 		Wins++; 
 	}
-
+	else {
+		alert("Sorry but in the name of the moon, I will punish you!");
+		Losses++; 
+	}
 
 
 
