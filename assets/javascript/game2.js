@@ -28,6 +28,15 @@ mNumber = moon + murcury + venus + mars;
 
 // console.log(mNumber);
 
+
+// Generate random numbers 
+var getRandom = function(min, max) {
+	return Math.floor(Math.random() * (max - min + 1) + min); 
+};
+
+// update moon value
+moon += getRandom(1, 12); 
+
 // Make numbers appear 
 $('#wand').on('click', function() {
 	$('#MNumber').html(magicNumber); 
@@ -35,19 +44,24 @@ $('#wand').on('click', function() {
 });
 
 $('.sM').on('click', function() {
-	$('#MOutput').html(moon); 
+
+	// give data value  
+	var mvalue = $('.sM').data('moon',getRandom(1, 12)); 
+
+	console.log(mvalue); 
+	// $('#MOutput').html(mvalue); 
 });
 
 $('.sMer').on('click', function() {
-	$('#MOutput').html(moon); 
+	$('#MOutput').html(murcury); 
 });
 
 $('.sV').on('click', function() {
-	$('#MOutput').html(moon); 
+	$('#MOutput').html(venus); 
 });
 
 $('.sMars').on('click', function() {
-	$('#MOutput').html(moon); 
+	$('#MOutput').html(mars); 
 });
 
 

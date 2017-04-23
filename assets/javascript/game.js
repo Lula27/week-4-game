@@ -87,7 +87,7 @@ mars += getRandom(1, 12);
 			var mNumber = ""; 
 
 		for (var i = 0; i < 2; i++) {
-		mNumber += getRandom(1, 10);
+		mNumber += getRandom(1, 12);
 		
 		}
 
@@ -95,6 +95,15 @@ mars += getRandom(1, 12);
 	// 	console.log(mNumber); 
 
 	})
+
+		// For Wins/Losses 
+
+		if (magicNumber == mNumber) {
+
+			console.log("You win!")
+		} else {
+			console.log("Sorry, try again!")
+		}; 
 
 	   // Responsive for winning/losing game:insert media clips
 		// if (MagicNumber == MNumber) {  //Not working as expected. Losses alert keeps popping up and automatically adding... 
@@ -109,14 +118,14 @@ mars += getRandom(1, 12);
 
 
 	// Scores Count
-	if (magicNumber === mNumber) {
-		alert("You win!");
-		Wins++; 
-	}
-	else {
-		// alert("Sorry but in the name of the moon, I will punish you!");
-		Losses++; 
-	}
+	// if (magicNumber === mNumber) {
+	// 	alert("You win!");
+	// 	Wins++; 
+	// }
+	// else {
+	// 	// alert("Sorry but in the name of the moon, I will punish you!");
+	// 	Losses++; 
+	// }
 
 
 
